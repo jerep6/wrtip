@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html >
+    <head>
+        <title>WordReference API</title>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <style type="text/css">
+            html,body {font-family: arial, verdana, sans-serif; font-size: 12px; margin:0px; height:100%;}
+            table.Rtbl {border: solid 1px white; line-height:16px; border-collapse:collapse;}
+            div#Otbl {padding: 0px;}
+            span.EsIPA { font-family:"Lucida Sans Unicode", "Arial Unicode MS","Lucida Grande"; color: blue; font-size: 10pt; }
+            .small1 {font-size: x-small}
+            tr.even {background-color: #e8e8ff;vertical-align: top}
+            tr.odd  {background-color: white;vertical-align: top}
+            tr.evenEx {background-color: #e8e8ff;vertical-align: top}
+            tr.oddEx  {background-color: white;vertical-align: top}
+            td.Head {padding-left:0px; padding-right: 10px; font-weight: bold; font-size:13px; text-decoration:underline; line-height:30px}
+
+            #si {width:90%;max-width:180px;}
+            #dictselect {font-size:11px;width:130px;}
+
+            #Rtbl2      {position:absolute; right: 0px; top:278px; width:400px; border: solid 1px black;}
+            table.Rtbl2 {line-height:16px; border-collapse:collapse;}
+
+            .FrW2       {padding-left:1px;font-weight: bold;}
+            .To2        {text-indent: 50px;font-style: italic}
+
+            .FrCN2, td.ToW22, td.POS2   {padding-left:1px;font-size:11px;}
+            .ToCN2  {padding-left:20px; font-style: italic}
+            .ToW2   {padding-left:5px; padding-right: 5px}
+            .Ex2, td.ToEx2  {padding-left: 5px; padding-right:5px; color:SlateGray;}
+            .FrEx2  {padding-left: 5px; padding-right:5px; color:#483D8B;}
+            .ToNt2  {padding-left: 5px; padding-right:5px; color:red;}
+            span.POS2   {padding-left:2px;}
+            .POS2       {color:#524BD3; font-style: italic;}
+            tr.evenExHide, tr.oddExHide {display:none}
+
+            table {
+                width: 100%;
+            }
+            .ToWrd, .FrW2 { width: 50%; height: 30px;}
+        </style>
+
+    </head>
+<body>
+    <div style="max-width:300px">
+    <div style="font-weight:bold;font-size:15px;border-bottom: solid black 1px; border-top: solid black 1px; min-height:20px; background-color:#5E58C7;color:#FFFFFF; text-align:center">WordReference.com Dictionaries
+    </div>
+
+    <div style="border-bottom: solid black 1px; background-color:#918CE3; padding:2px; text-align:center;">
+
+    <form method="GET" action="http://api.wordreference.com/index.aspx" class=lookup name="sbox" target="_self">
+        <input type="hidden" name="u" value="1">
+        <input type="text" name="w" id="si" maxlength="30" tabindex="1" onKeyDown="keyDown(event)" accesskey="s" title="Alt-(Shift)-S" value=""> 
+        <select size="1" name="dict" tabindex="2" id="dictselect">
+            <option value="enfr">English-French</option>
+        </select><input type="submit" value="Go" name="B" title="Look Up" tabindex="3" style="padding:0px">
+    </form>
+
+    </div>
+    <div>
+        <p class='wrcopyright'><a name="grin103"></a> 
+        <table class='WRD'>
+            <tr class='wrtopsection'>
+                <td colspan='3' title='Principal Translations'>
+                    <strong>Principal Translations/Principales traductions</strong>
+                </td>
+            </tr>
+            <tr class='even'>
+                <td><span class='FrW2'></td>
+                <td class='ToWrd' ></td>
+            </tr>
+            <tr class='odd'>
+                <td><span class='FrW2'></td>
+                <td class='ToWrd' ></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

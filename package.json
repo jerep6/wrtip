@@ -1,0 +1,55 @@
+{
+    "name": "wrtip", 
+    "license": "GPL 3.0", 
+    "author": "jerep6", 
+    "version": "1.3", 
+    "fullName": "Wordreference Translate In Page", 
+    "id": "jid1-AIK1jwTdfcyYQw", 
+    "description": "Open a layer in page and translate the selected word with wordreference",
+    
+    "preferences": [{
+        "title":        "Width of the panel",
+        "description" : "Scroolbar appears if too small",
+        "name":         "panel.width",
+        "value":        300,
+        "type":         "integer"
+        },
+        {
+        "title":        "Height of the panel",
+        "description" : "Scroolbar appears if too small",
+        "name":         "panel.height",
+        "value":        400,
+        "type":         "integer"
+        },
+        {
+        "name":     "translate.source",
+        "type":     "menulist",
+        "title":    "Source language",
+        "value":    "en",
+        "options": [
+            { "value": "en", "label": "English"},
+            { "value": "es", "label": "Spanish"},
+            { "value": "fr", "label": "French" },
+            { "value": "it", "label": "Italian" },
+            { "value": "gr", "label": "Greek"},
+            { "value": "pt", "label": "Portuguese"},
+            { "value": "zh", "label": "Chinese"},
+            { "value": "ja", "label": "Japanese"}
+        ]},
+        {
+        "name":     "translate.destination",
+        "type":     "menulist",
+        "title":    "Destination language",
+        "value":    "fr",
+        "options": [
+            { "value": "en", "label": "English"},
+            { "value": "es", "label": "Spanish"},
+            { "value": "fr", "label": "French" },
+            { "value": "it", "label": "Italian" },
+            { "value": "gr", "label": "Greek"},
+            { "value": "pt", "label": "Portuguese"},
+            { "value": "zh", "label": "Chinese"},
+            { "value": "ja", "label": "Japanese"}                
+        ]}
+    ]
+} 
