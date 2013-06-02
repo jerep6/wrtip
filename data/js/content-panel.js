@@ -4,35 +4,37 @@ self.port.on("newTranslation", function(obj) {
   var wrPage = parser.parseFromString(obj.html, "text/html");
   
   // Inject it into html balise of the panel
-  document.getElementsByTagName('html')[0].innerHTML=wrPage.getElementsByTagName('html')[0].innerHTML;
+  $("html").html(wrPage.getElementsByTagName('html')[0].innerHTML);
   
   
   // Get search form
-  var form = document.getElementsByName("sbox")[0];
-  console.log("Form="+form);
-  
+  var form = $("form[name='sbox']");
   if(form != null && form != undefined) {
     // Write into input field the search word and select it with focus. Thanks to that, scrollbar returns to the top
-    var inputSearch =  form.elements["si"];
-    inputSearch.value=obj.search;
-    inputSearch.focus();
-    inputSearch.select();
+    var inputSearch =  form.find("input[name='w']");
+    inputSearch.val(obj.search).focus().select();
+    
     
     // Overwride the submit method. I don't want to reload page because it erase content script
-    //form.action ="javascript:;";
-    form.onsubmit = function() {
-      console.log("Submit");
+    form.submit(function() {
       // Get search params
-      var wordToTranslate = inputSearch.value;
-      var language = form.elements["dictselect"];
-      console.log(language);
+      var wordToTranslate = inputSearch.val();
+      var language = form.find("select[name='dict']").val();
+      
       self.port.emit("newSearch", {"search": wordToTranslate, "language": language});
       return false;
-    };
+    });
   }
   
 });
 
+self.port.on("hide", function(obj) {
+  var anchor = $("body div").children("div:eq(2)");
+  var img = $('<img />').attr("src", "../img/loading.gif");
+  img.css({"float":"left"});
+  
+  anchor.prepend(img);
+});
 
 // I can't use iframe due to same origin policy 
 // self.port.on("newTranslationIframe", function(obj) {
