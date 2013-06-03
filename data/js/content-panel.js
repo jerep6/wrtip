@@ -1,3 +1,8 @@
+// create loading image
+var imgLoading = $('<img />').attr("src", "../img/loading.gif");
+imgLoading.css({"position":"absolute", "top":"100px", "left": "0px", "width":"180px", "opacity":"0.1"});
+
+
 self.port.on("newTranslation", function(obj) {
   // Create a dom element with the result page from WordReference
   var parser = new DOMParser();
@@ -15,7 +20,7 @@ self.port.on("newTranslation", function(obj) {
     inputSearch.val(obj.search).focus().select();
     
     
-    // Overwride the submit method. I don't want to reload page because it erase content script
+    // Override the submit method. I don't want to reload page because it erase content script
     form.submit(function() {
       // Get search params
       var wordToTranslate = inputSearch.val();
@@ -28,12 +33,15 @@ self.port.on("newTranslation", function(obj) {
   
 });
 
-self.port.on("hide", function(obj) {
-  var anchor = $("body div").children("div:eq(2)");
-  var img = $('<img />').attr("src", "../img/loading.gif");
-  img.css({"float":"left"});
+self.port.on("hide", function(panelWidth) {
+  // Compute left according to panel size
+  var left = (panelWidth - 180) / 2;
   
-  anchor.prepend(img);
+  // Override left 
+  imgLoading.css("left", left+"px");
+  
+  // Append to DOM
+  $("html").prepend(imgLoading);
 });
 
 // I can't use iframe due to same origin policy 
