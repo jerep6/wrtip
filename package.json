@@ -2,7 +2,7 @@
     "name": "wrtip", 
     "license": "GPL 3.0", 
     "author": "jerep6", 
-    "version": "1.4", 
+    "version": "1.4-SNAPSHOT", 
     "fullName": "Wordreference Translate In Page", 
     "id": "jid1-AIK1jwTdfcyYQw", 
     "description": "Open a layer in page and translate the selected word with wordreference",
@@ -50,6 +50,20 @@
             { "value": "pt", "label": "Portuguese"},
             { "value": "zh", "label": "Chinese"},
             { "value": "ja", "label": "Japanese"}                
-        ]}
+        ]},
+        {
+        "title":        "Activate hotkey?",
+        "description" : "If checked hotkey will display translation of selected word",
+        "name":         "hotkey.active",
+        "value":        true,
+        "type":         "bool"
+        },
+        {
+        "title":        "Key combination",
+        "description" : "Separate by dash. Useful when hotkey cheked.\nDefault 'alt-shift-f'. Modifier=shift,alt,meta,control,accel",
+        "name":         "hotkey.combination",
+        "value":        "alt-shift-f",
+        "type":         "string"
+        }
     ]
 } 
