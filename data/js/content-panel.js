@@ -18,7 +18,7 @@ self.port.on("newTranslation", function(obj) {
     // Write into input field the search word and select it with focus. Thanks to that, scrollbar returns to the top
     var inputSearch =  form.find("input[name='w']");
     inputSearch.val(obj.search).focus().select();
-    
+    inputSearch.removeAttr("onKeyDown");
     
     // Override the submit method. I don't want to reload page because it erase content script
     form.submit(function() {
@@ -43,6 +43,7 @@ self.port.on("hide", function(panelWidth) {
   // Append to DOM
   $("html").prepend(imgLoading);
 });
+
 
 // I can't use iframe due to same origin policy 
 // self.port.on("newTranslationIframe", function(obj) {
