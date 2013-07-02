@@ -2,7 +2,7 @@
     "name": "wrtip", 
     "license": "GPL 3.0", 
     "author": "jerep6", 
-    "version": "1.4.1", 
+    "version": "1.4.2", 
     "fullName": "Wordreference Translate In Page", 
     "id": "jid1-AIK1jwTdfcyYQw", 
     "description": "Open a layer in page and translate the selected word with wordreference",
