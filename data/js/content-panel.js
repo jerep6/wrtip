@@ -19,6 +19,15 @@ self.port.on("newTranslation", function(obj) {
     var inputSearch =  form.find("input[name='w']");
     inputSearch.val(obj.search).focus().select();
     
+    // Due to a bug in Firefox 23, select have to be a size > 1
+    $("#dictselect").attr("size", 2).css("width", "145px");
+    var isubmit = form.find("input[type='submit']");
+    isubmit.css({
+      "margin" : 0,
+      "padding": "5px",
+      "vertical-align" : "top"
+    });
+    
     // Override the submit method. I don't want to reload page because it erase content script
     form.submit(function() {
       // Get search params

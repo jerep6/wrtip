@@ -38,6 +38,8 @@
                 width: 100%;
             }
             .ToWrd, .FrW2 { width: 50%; height: 30px;}
+            
+            .bugFx { margin : 0; padding: 5px; vertical-align : top;}
         </style>
 
     </head>
@@ -51,9 +53,10 @@
     <form method="GET" action="http://api.wordreference.com/index.aspx" class=lookup name="sbox" target="_self">
         <input type="hidden" name="u" value="1">
         <input type="text" name="w" id="si" maxlength="30" tabindex="1" onKeyDown="keyDown(event)" accesskey="s" title="Alt-(Shift)-S" value=""> 
-        <select size="1" name="dict" tabindex="2" id="dictselect">
+        <select size="2" name="dict" tabindex="2" id="dictselect">
             <option value="enfr">English-French</option>
-        </select><input type="submit" value="Go" name="B" title="Look Up" tabindex="3" style="padding:0px">
+            <option value="fren">French-English</option>
+        </select><input type="submit" value="Go" name="B" title="Look Up" tabindex="3" class="bugFx">
     </form>
 
     </div>
