@@ -38,7 +38,7 @@ self.port.on("newTranslation", function(obj) {
       return false;
     });
 	
-	form.after("<a style='color: white' id='openInTab' href='javascript:;'>Ouvrir dans un onglet</a>");
+	form.after("<a style='color: white' id='openInTab' href='javascript:;'>"+obj.msg.openTab+"</a>");
 	$("#openInTab").click(function() {
 		// Get search params
 		var wordToTranslate = inputSearch.val();
