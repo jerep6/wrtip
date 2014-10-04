@@ -4,7 +4,7 @@
  */
 self.on("context", function(node) {
     self.postMessage({"event" : "context", "payload" : window.getSelection().toString()});
-    return true;
+    return true; // true to dispay context menu. False otherwise
 });
 
 self.on("click", function(node, data) {
