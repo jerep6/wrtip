@@ -64,6 +64,25 @@
         "name":         "hotkey.combination",
         "value":        "alt-shift-f",
         "type":         "string"
-        }
+        },
+        {
+		"title": "Internal translation source",
+		"name": "internal.source",
+		"type": "radio",
+		"value": "DEFAULT",
+		"options": [
+			{
+				"value": "DEFAULT",
+				"label": "Default"
+			},{
+				"value": "API",
+				"label": "API"
+			},
+			{
+				"value": "MOBILE",
+				"label": "Mobile"
+			}
+		]
+	}
     ]
 } 
