@@ -23,12 +23,13 @@ self.port.on("newTranslationMOBILE", function(obj) {
   html = html.replace("width = 450", "width = 300");
   html = html.replace(/&nbsp;/g, "&nbsp; ");
   
-  // Inject it into html balise of the panel
-  document.getElementsByTagName('html')[0].innerHTML = html;
-  //$("html").html(wrPage.getElementsByTagName('html')[0].innerHTML);
+  // Inject it into html balise of the panel. JQuery delete head and body node
+  $("html").html(html);
   
   // Override some properties
-  $("head").append('<link rel="stylesheet" href="http://mini.wordreference.com/2012/scripts/styleext.css" type="text/css" media="screen" />');
+  $("form[name='sbox']").css("margin", 0)
+  .before('<link rel="stylesheet" href="http://mini.wordreference.com/2012/scripts/styleext.css" type="text/css" media="screen" />');
+
   $(".WRreporterror").remove();
   $("#threadsHeader").remove();
   $("#lista_link").remove();
@@ -42,13 +43,12 @@ self.port.on("newTranslationMOBILE", function(obj) {
   $("#header").css({"height": "20px", "line-height": "20px"});
   $("#logo").css("line-height", "20px");
   $("td.namecell").css("height", "20px");
-  
-  $("td").css("padding", "0");
-  
-  $("form[name='sbox']").css("margin", 0);
-  
-  customizeForm(self, obj);
 
+  $("td").css("padding", "0");
+
+
+
+  customizeForm(self, obj);
 });
 
 self.port.on("hide", function(panelWidth) {
