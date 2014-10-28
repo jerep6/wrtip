@@ -35,16 +35,17 @@ self.port.on("newTranslationMOBILE", function(obj) {
   $("#extra_links").remove();
   $(".layout > tbody > tr:last").remove();
 
-  $("#Otbl").css("width", "100%");
+  $("#Otbl").css({"width": "100%", "min-height":"300px"});
   $("td.content").css("width", "100%");
   $("table.WRD").css("width", "100%");
   $("#logo a").css("font-size", "17px");
-  $("#header").css("height", "20px");
-  $("#header").css("line-height", "20px");
+  $("#header").css({"height": "20px", "line-height": "20px"});
   $("#logo").css("line-height", "20px");
   $("td.namecell").css("height", "20px");
   
   $("td").css("padding", "0");
+  
+  $("form[name='sbox']").css("margin", 0);
   
   customizeForm(self, obj);
 
