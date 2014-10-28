@@ -46,6 +46,8 @@ self.port.on("newTranslationMOBILE", function(obj) {
 
   $("td").css("padding", "0");
 
+  $("em.tooltip span").remove();
+  $("em.tooltip").removeClass("tooltip");
 
 
   customizeForm(self, obj);
