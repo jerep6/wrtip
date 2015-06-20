@@ -1,8 +1,8 @@
 # Wordreference Translate In Page (wrtip)
 
-#Lancer  l'extension
+##Lancer  l'extension
 
-## CFX
+### CFX
 
 ```
 cd ~/install/addon-sdk-1.17/
@@ -11,7 +11,7 @@ cd ~/travail/perso/wrtip/
 cfx run
 ```
 
-#Packager
+##Packager
 
 ```
 cfx xpi
