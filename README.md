@@ -1,18 +1,16 @@
 # Wordreference Translate In Page (wrtip)
 
-##Lancer  l'extension
+##Lancer l'extension
 
-### CFX
+### JPM
 
 ```
-cd ~/install/addon-sdk-1.17/
-source bin/activate
-cd ~/travail/perso/wrtip/
-cfx run
+npm install
+./nodes_modules/.bin/jpm run
 ```
 
 ##Packager
 
 ```
-cfx xpi
+./nodes_modules/.bin/jpm xpi
 ```

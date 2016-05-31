@@ -1,88 +1,142 @@
 {
-    "name": "wrtip", 
-    "license": "GPL 3.0", 
-    "author": "jerep6", 
-    "version": "1.7.0",
-    "fullName": "Wordreference Translate In Page", 
-    "id": "jid1-AIK1jwTdfcyYQw", 
-    "description": "Open a layer in page and translate the selected word with wordreference",
-    
-    "preferences": [{
-        "title":        "Width of the panel",
-        "description" : "Scroolbar appears if too small",
-        "name":         "panel.width",
-        "value":        300,
-        "type":         "integer"
+  "name": "wrtip",
+  "license": "GPL 3.0",
+  "author": "jerep6",
+  "version": "1.7.1",
+  "fullName": "Wordreference Translate In Page",
+  "id": "jid1-AIK1jwTdfcyYQw@jetpack",
+  "description": "Open a layer in page and translate the selected word with wordreference",
+  "preferences": [
+    {
+      "title": "Width of the panel",
+      "description": "Scroolbar appears if too small",
+      "name": "panel.width",
+      "value": 300,
+      "type": "integer"
+    },
+    {
+      "title": "Height of the panel",
+      "description": "Scroolbar appears if too small",
+      "name": "panel.height",
+      "value": 400,
+      "type": "integer"
+    },
+    {
+      "name": "translate.source",
+      "type": "menulist",
+      "title": "Source language",
+      "value": "en",
+      "options": [
+        {
+          "value": "en",
+          "label": "English"
         },
         {
-        "title":        "Height of the panel",
-        "description" : "Scroolbar appears if too small",
-        "name":         "panel.height",
-        "value":        400,
-        "type":         "integer"
+          "value": "es",
+          "label": "Spanish"
         },
         {
-        "name":     "translate.source",
-        "type":     "menulist",
-        "title":    "Source language",
-        "value":    "en",
-        "options": [
-            { "value": "en", "label": "English"},
-            { "value": "es", "label": "Spanish"},
-            { "value": "fr", "label": "French" },
-            { "value": "it", "label": "Italian" },
-            { "value": "gr", "label": "Greek"},
-            { "value": "pt", "label": "Portuguese"},
-            { "value": "zh", "label": "Chinese"},
-            { "value": "ja", "label": "Japanese"}
-        ]},
-        {
-        "name":     "translate.destination",
-        "type":     "menulist",
-        "title":    "Destination language",
-        "value":    "fr",
-        "options": [
-            { "value": "en", "label": "English"},
-            { "value": "es", "label": "Spanish"},
-            { "value": "fr", "label": "French" },
-            { "value": "it", "label": "Italian" },
-            { "value": "gr", "label": "Greek"},
-            { "value": "pt", "label": "Portuguese"},
-            { "value": "zh", "label": "Chinese"},
-            { "value": "ja", "label": "Japanese"}                
-        ]},
-        {
-        "title":        "Activate hotkey?",
-        "description" : "If checked hotkey will display translation of selected word",
-        "name":         "hotkey.active",
-        "value":        true,
-        "type":         "bool"
+          "value": "fr",
+          "label": "French"
         },
         {
-        "title":        "Key combination",
-        "description" : "Separate by dash. Useful when hotkey cheked.\nDefault 'alt-shift-f'. Modifier=shift,alt,meta,control,accel",
-        "name":         "hotkey.combination",
-        "value":        "alt-shift-f",
-        "type":         "string"
+          "value": "it",
+          "label": "Italian"
         },
         {
-		"title": "Internal translation source",
-		"name": "internal.source",
-		"type": "radio",
-		"value": "DEFAULT",
-		"options": [
-			{
-				"value": "DEFAULT",
-				"label": "Default"
-			},{
-				"value": "API",
-				"label": "API"
-			},
-			{
-				"value": "MOBILE",
-				"label": "Mobile"
-			}
-		]
-	}
-    ]
-} 
+          "value": "gr",
+          "label": "Greek"
+        },
+        {
+          "value": "pt",
+          "label": "Portuguese"
+        },
+        {
+          "value": "zh",
+          "label": "Chinese"
+        },
+        {
+          "value": "ja",
+          "label": "Japanese"
+        }
+      ]
+    },
+    {
+      "name": "translate.destination",
+      "type": "menulist",
+      "title": "Destination language",
+      "value": "fr",
+      "options": [
+        {
+          "value": "en",
+          "label": "English"
+        },
+        {
+          "value": "es",
+          "label": "Spanish"
+        },
+        {
+          "value": "fr",
+          "label": "French"
+        },
+        {
+          "value": "it",
+          "label": "Italian"
+        },
+        {
+          "value": "gr",
+          "label": "Greek"
+        },
+        {
+          "value": "pt",
+          "label": "Portuguese"
+        },
+        {
+          "value": "zh",
+          "label": "Chinese"
+        },
+        {
+          "value": "ja",
+          "label": "Japanese"
+        }
+      ]
+    },
+    {
+      "title": "Activate hotkey?",
+      "description": "If checked hotkey will display translation of selected word",
+      "name": "hotkey.active",
+      "value": true,
+      "type": "bool"
+    },
+    {
+      "title": "Key combination",
+      "description": "Separate by dash. Useful when hotkey cheked.\nDefault 'alt-shift-f'. Modifier=shift,alt,meta,control,accel",
+      "name": "hotkey.combination",
+      "value": "alt-shift-f",
+      "type": "string"
+    },
+    {
+      "title": "Internal translation source",
+      "name": "internal.source",
+      "type": "radio",
+      "value": "DEFAULT",
+      "options": [
+        {
+          "value": "DEFAULT",
+          "label": "Default"
+        },
+        {
+          "value": "API",
+          "label": "API"
+        },
+        {
+          "value": "MOBILE",
+          "label": "Mobile"
+        }
+      ]
+    }
+  ],
+  "devDependencies": {
+    "jpm": "1.0.7"
+  }
+}
